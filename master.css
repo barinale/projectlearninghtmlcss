@@ -1,0 +1,14 @@
+*{padding:0;margin:0;font-family: sans-serif;overflow-y: hidden;}
+:root{--main-color:#F47038;}
+body{font-size:20px;}
+.RightCause{width:100px;height:100px;background:var(--main-color);
+position:fixed;left:0;top:0;z-index: 10;color:white;}
+.RightCause span{font-size: 1.7em;}
+#main{width:75%;display: block;overflow: hidden;float: left;}
+#main img{width:100%;position:relative;}
+#main .insidemaine{position:absolute;top:50%;left:15%;display: flex;
+width:70%;}
+#main .insidemaine .imageslider{width:400px;height: 300px;
+  padding-top: 10px;}
+#sidemenu{width:25%;display: inline-block;float: left;
+  background: var(--main-color);height:100vh;}

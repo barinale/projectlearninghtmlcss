@@ -1,6 +1,6 @@
-*{padding:0;margin:0;font-family: sans-serif;box-sizing: border-box;}
+*{padding:0;margin:0;font-family: sans-serif;box-sizing: border-box;overflow: hidden;}
 :root{--main-color:#F47038;}
-a{text-decoration: none;}ul{list-style: none;}
+a{text-decoration: none;color:white;}ul{list-style: none;}
 body{font-size:20px;}
 .RightCause{width:100px;height:100px;background:var(--main-color);
 position:fixed;left:0;top:0;z-index: 10;color:white;}
@@ -17,10 +17,19 @@ width:70%;}
 #main .insidemaine .imageslider{width:400px;height: 300px;
   padding-top: 10px;}
 #sidemenu{padding:10px 20px;width:25%;display: inline-block;
-  background: var(--main-color);height:100vh;color:white;}
-#sidemenu  nav:first-child{background:red;display:inline-block;float:left;}
-#sidemenu  nav:nth-child(2){background:yellow;width:20%;display: block;}
-#sidemenu > nav ul:first-child{display: flex;width:70%;justify-content: space-between;
-background: red;}
-#sidemenu > nav label {display: block;}
-#sidemenu > nav > nav{display: inline;}
+  background: var(--main-color);height:100vh;color:white;position: absolute;}
+#sidemenu  nav:first-child{display:inline-block;width: 90%}
+
+#sidemenu > nav ul:first-child{display: flex;width:100%;justify-content: space-between;
+}
+#sidemenu  nav:nth-child(2){float:right;}
+#sidemenu  nav:nth-child(2) input{display: none;}
+#sidemenu  nav:nth-child(2) label{font-size:2rem;position: fixed;right:0;top:0;z-index: 10}
+#sidemenu  nav:nth-child(2) ul{position: fixed;width:100%; position:absolute;right:-300px;
+height:100vh;background:var(--main-color);top:0;transition: right 1s;}
+#sidemenu  nav:nth-child(2) ul li {padding:10px 10px;font-size: 1.2em;}
+#sidemenu  nav:nth-child(2) input:checked + ul{right:0;}
+
+/*******---------------------------*****************/
+#sidemenu   span{display: flex;position: relative;background:red;right: 0}
+#sidemenu   span h1{align-self: flex-end;}

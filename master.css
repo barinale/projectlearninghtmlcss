@@ -1,5 +1,6 @@
 *{padding:0;margin:0;font-family: sans-serif;box-sizing: border-box;overflow: hidden;}
 :root{--main-color:#F47038;}
+
 a{text-decoration: none;color:white;}ul{list-style: none;}
 body{font-size:20px;}
 .RightCause{width:100px;height:100px;background:var(--main-color);
@@ -16,8 +17,13 @@ position:fixed;left:0;top:0;z-index: 10;color:white;}
 width:70%;}
 #main .insidemaine .imageslider{width:400px;height: 300px;
   padding-top: 10px;}
+#main .insidemaine button {background-color: var(--main-color);width:150px;
+  height:40px;border: 1px solid white;color:white;font-size:1.3rem;}
+#main .insidemaine h3{font-family: 'Lobster', cursive;}
+#main .insidemaine h1{font-family: 'Anton', sans-serif;font-size: 3rem}
+#main .insidemaine p{font-weight: 900}
 #sidemenu{padding:10px 20px;width:25%;display: inline-block;
-  background: var(--main-color);height:100vh;color:white;position: absolute;}
+  background: var(--main-color);height:100vh;color:white;position: relative;}
 #sidemenu  nav:first-child{display:inline-block;width: 90%}
 
 #sidemenu > nav ul:first-child{display: flex;width:100%;justify-content: space-between;
@@ -25,11 +31,12 @@ width:70%;}
 #sidemenu  nav:nth-child(2){float:right;}
 #sidemenu  nav:nth-child(2) input{display: none;}
 #sidemenu  nav:nth-child(2) label{font-size:2rem;position: fixed;right:0;top:0;z-index: 10}
-#sidemenu  nav:nth-child(2) ul{position: fixed;width:100%; position:absolute;right:-300px;
+#sidemenu  nav:nth-child(2) ul{width:100%; position:absolute;right:-700px;
 height:100vh;background:var(--main-color);top:0;transition: right 1s;}
 #sidemenu  nav:nth-child(2) ul li {padding:10px 10px;font-size: 1.2em;}
-#sidemenu  nav:nth-child(2) input:checked + ul{right:0;}
+#sidemenu  nav:nth-child(2) input:checked + ul{right:0;display: inline;z-index: 5}
 
-/*******---------------------------*****************/
-#sidemenu   span{display: flex;position: relative;background:red;right: 0}
-#sidemenu   span h1{align-self: flex-end;}
+
+
+#sidemenu   span h1{writing-mode: vertical-rl;position: absolute;right:0;
+  bottom:0;font-size:3rem;margin-bottom: 10px;margin-right: -10px;z-index: 1}
